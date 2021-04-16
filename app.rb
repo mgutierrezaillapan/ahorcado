@@ -3,12 +3,14 @@ require './config'
 require './lib/ahorcado'
 
 get '/' do
-    @palabra = "-----"
+    @@ahorcado = Ahorcado.new
+
+    @palabra = @@ahorcado.print_palabra
     erb :index
 end
 
 post '/' do
-    ahorcado = Ahorcado.new
-    @palabra = ahorcado.adivinar params[:letra]
+    @palabra = @@ahorcado.adivinar params[:letra]
+    @resultado = @@ahorcado.resultado
     erb :index
 end

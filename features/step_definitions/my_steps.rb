@@ -14,3 +14,7 @@ When("Adivinar una letra {string}") do |letra|
     fill_in "letra", :with=>letra
     click_button "Adivinar"
 end
+
+Then("Muetra resultado {string}") do |resultado|
+    expect(page).to have_css "div#resultado", text: resultado
+  end
