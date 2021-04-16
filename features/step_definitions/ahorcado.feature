@@ -22,3 +22,8 @@ And Adivinar una letra "u"
 And Adivinar una letra "m"
 Then Muestra palabra "s c r u m"
 And  Muetra resultado "Ganaste!"
+
+Scenario: Letras arriesgadas
+Given Inicio la aplicacion
+When Adivinar una letra "a"
+Then Muestra arriesgadas "a"

@@ -18,3 +18,7 @@ end
 Then("Muetra resultado {string}") do |resultado|
     expect(page).to have_css "div#resultado", text: resultado
   end
+
+Then("Muestra arriesgadas {string}") do |arriesgadas|
+    expect(page).to have_css "div#arriesgadas", text: arriesgadas
+end

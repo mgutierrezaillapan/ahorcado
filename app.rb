@@ -12,5 +12,6 @@ end
 post '/' do
     @palabra = @@ahorcado.adivinar params[:letra]
     @resultado = @@ahorcado.resultado
+    @arriesgadas = @@ahorcado.print_arriesgadas
     erb :index
 end

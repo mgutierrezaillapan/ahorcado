@@ -10,7 +10,9 @@ describe Ahorcado do
     it "letra incorrecta" do
         ahorcado = Ahorcado.new
         mensaje = ahorcado.adivinar "a"
+        arriesgadas = ahorcado.print_arriesgadas
         expect(mensaje).to eq "- - - - -"
+        expect(arriesgadas).to eq "a"
     end
 
     it "palabra correcta" do

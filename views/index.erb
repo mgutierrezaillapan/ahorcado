@@ -7,11 +7,12 @@
     </head>
     <body>
         <h1>Bienvenido/a Ahorcado</h1>
-        <div id="palabra"><%=@palabra%></div>
+        <div id="palabra">Palabra a adivinar: <%=@palabra%></div>
         <form action="/" method="post">
             <input type="text" name="letra" id="numero" />
             <input type="submit" value="Adivinar" />
         </form>
         <div id="resultado"><%=@resultado%></div>
+        <div id="arriesgadas"><%=@arriesgadas%></div>
     </body>
 </html>
