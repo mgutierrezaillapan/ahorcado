@@ -6,11 +6,11 @@ Then("Muestra {string}") do |titulo|
     expect(page).to have_css "h1", text: titulo
 end
 
-When("arriesga un numero {int}") do |valor|
-    fill_in "numero", :with => valor
-    click_button "Arriesgar"
-end
-  
-Then("muestra mensaje {string}") do |mensaje|
-    expect(page).to have_css "div#mensaje", text: mensaje
+Then("Muestra palabra {string}") do |palabra|
+    expect(page).to have_css "div#palabra", text: palabra
+  end
+
+When("Adivinar una letra {string}") do |letra|
+    fill_in "letra", :with=>letra
+    click_button "Adivinar"
 end
